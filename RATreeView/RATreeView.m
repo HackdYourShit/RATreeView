@@ -109,13 +109,13 @@
 {
   UITableViewStyle tableViewStyle = [RATreeView tableViewStyleForTreeViewStyle:style];
   
-  UITableView *tableView =  [[UITableView alloc] initWithFrame:frame style:tableViewStyle];
-  tableView.delegate = (id<UITableViewDelegate>)self;
-  tableView.dataSource = (id<UITableViewDataSource>)self;
-  tableView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-  tableView.backgroundColor = [UIColor clearColor];
-  [self addSubview:tableView];
-  [self setTableView:tableView];
+  self.embeddedTableView =  [[UITableView alloc] initWithFrame:frame style:tableViewStyle];
+  self.embeddedTableView.delegate = (id<UITableViewDelegate>)self;
+  self.embeddedTableView.dataSource = (id<UITableViewDataSource>)self;
+  self.embeddedTableView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+  self.embeddedTableView.backgroundColor = [UIColor clearColor];
+  [self addSubview:self.embeddedTableView];
+  [self setTableView:self.embeddedTableView];
   
   self.rowsExpandingAnimation = RATreeViewRowAnimationTop;
   self.rowsCollapsingAnimation = RATreeViewRowAnimationBottom;
