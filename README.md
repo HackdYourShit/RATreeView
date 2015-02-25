@@ -1,3 +1,6 @@
+*NOTE: this is a fork of the original RATreeView from Augustyniak
+This fork exposes the embedded UITableView as a property of RATreeView, which allows adjustments of the table view background color. By default, the tableview is stuck with a white background. 
+
 RATreeView (iOS 5.0+) 
 ==============
 [![Twitter: @raaugustyniak](https://img.shields.io/badge/contact-@raaugustyniak-blue.svg?style=flat)](https://twitter.com/raaugustyniak)
